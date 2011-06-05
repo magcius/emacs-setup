@@ -23,7 +23,7 @@
   (mapconcat 'capitalize (glib-fudge-name name) ""))
 
 (defun glib-build (name sep)
-  (let ((n (glib-fudge-name)))
+  (let ((n (glib-fudge-name name)))
     (format "%s_%s_%s" (car n) sep (mapconcat (lambda (e) e) (cdr n) "_"))))
 
 (defun glib-t (&optional name)
