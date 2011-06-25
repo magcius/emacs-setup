@@ -16,13 +16,14 @@
 
 (defun glib-type (&optional name)
   " => ST_LAYOUT_CONTAINER"
-  (mapconcat 'upcase (glib-from-filename) "_"))
+  (mapconcat 'upcase (glib-fudge-name name) "_"))
 
 (defun glib-class (&optional name)
   " => StLayoutContainer"
   (mapconcat 'capitalize (glib-fudge-name name) ""))
 
 (defun glib-build (name sep)
+  " => ST_%(sep)s_LAYOUT_CONTAINER"
   (let ((n (glib-fudge-name name)))
     (format "%s_%s_%s" (car n) sep (mapconcat (lambda (e) e) (cdr n) "_"))))
 
@@ -46,5 +47,21 @@
 (defun glib-fprefix (&optional name)
   "st-layout-container.c => st_layout_container"
   (mapconcat 'downcase (glib-from-filename) "_"))
+
+(defun grep-gtype (dir class-name)
+  (interactive
+   (progn
+     (let ((class-name (grep-read-regexp))
+           (dir (read-directory-name "Base directory: "
+                                     nil default-directory t)))
+       (list dir class-name))))
+
+  (let ((command (concat grep-program " -ERHn --color=no "
+                         (shell-quote-argument
+                          (concat (regexp-quote class-name) "|"
+                                  (regexp-quote (glib-fprefix name))))
+                         " ."))
+        (default-directory (expand-file-name dir)))
+    (compilation-start command 'grep-mode)))
 
 (provide 'glib)
