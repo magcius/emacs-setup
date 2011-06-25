@@ -30,7 +30,7 @@
 (global-set-key (kbd "C-x C-b")         'ibuffer)
 (global-set-key (kbd "C-x g")           'magit-status)
 
-(global-set-key (kbd "C-c C-b")         'display-buffer)
+(global-set-key (kbd "C-c b")           'display-buffer)
 
 (require 'smooth-scrolling)
 
