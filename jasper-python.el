@@ -6,4 +6,7 @@
 (setq ropemacs-separate-doc-buffer t)
 (setq ropemacs-enable-autoimport   nil)
 
+(require 'django-mode)
+(require 'jinja)
+
 (provide 'jasper-python)

@@ -11,6 +11,7 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/Pymacs")
 (add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/vendor/yasnippet")
+(add-to-list 'load-path "~/.emacs.d/vendor/django-mode")
 
 (require 'jasper-visual)
 (require 'jasper-clipboard)
