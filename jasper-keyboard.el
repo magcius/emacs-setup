@@ -32,6 +32,9 @@
 
 (global-set-key (kbd "C-c b")           'display-buffer)
 
+(global-set-key (kbd "C-c C-w")         'adhoc-snippet-create)
+(global-set-key (kbd "C-c C-y")         'adhoc-snippet-insert)
+
 (require 'smooth-scrolling)
 
 ; C-z on Linux freezes the entire window.
