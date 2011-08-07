@@ -1,6 +1,4 @@
 
-(delete-selection-mode 1)
-
 (require 'magit)
 (defun delete-whitespace (&optional backwards)
   "Ripped directly from delete-horizontal-space"

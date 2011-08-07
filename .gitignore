@@ -1,3 +1,9 @@
 vendor/yasnippet
 vendor/auto-complete
 vendor/django-mode
+auto-save-list
+session*
+tramp
+*~
+*.dat
+.org-id-locations
