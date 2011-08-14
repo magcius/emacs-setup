@@ -50,6 +50,7 @@
      (minibuffer-prompt ((t (:foreground "#729fcf" :bold t))))
      (info-xref ((t (:foreground "#729fcf"))))
      (info-xref-visited ((t (:foreground "#ad7fa8"))))
+     (flymake-errline ((t (:background "#661225"))))
      )))
 
 (eval-after-load 'term
