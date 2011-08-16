@@ -50,7 +50,7 @@
 
 (defun glib-fprefix (&optional name)
   "st-layout-container.c => st_layout_container"
-  (mapconcat 'downcase (glib-from-filename) "_"))
+  (mapconcat 'downcase (glib-fudge-name name) "_"))
 
 (defun grep-gtype (dir class-name)
   (interactive
