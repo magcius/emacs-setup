@@ -13,7 +13,7 @@
 
 G_DEFINE_TYPE ($2, ${1:$(glib-fprefix text)}, ${3:G_TYPE_OBJECT});
 
-#define ${1:$(glib-no-ns text)}_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), ${1:$(glib-type text)}, $2Private)
+#define ${1:$(glib-no-ns text)}_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), ${1:$(glib-t text)}, $2Private))
 
 struct _$2Private
 {
@@ -52,7 +52,7 @@ ${1:$(glib-fprefix text)}_class_init ($2Class *klass)
 
 /**
  * ${1:$(glib-fprefix text)}_init:
- * @${1$(glib-inst text)}: (in): A #$2.
+ * @${1:$(glib-inst text)}: (in): A #$2.
  *
  * Initializes the newly created #$2 instance.
  */
