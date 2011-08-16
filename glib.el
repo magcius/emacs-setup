@@ -31,6 +31,10 @@
   " => ST_TYPE_LAYOUT_CONTAINER"
   (glib-build name "TYPE"))
 
+(defun glib-no-ns (&optional name)
+  " => LAYOUT_CONTAINER"
+  (mapconcat (lambda (e) e) (cdr (glib-fudge-name name)) "_"))
+
 (defun glib-is (&optional name)
   " => ST_IS_LAYOUT_CONTAINER"
   (glib-build name "IS"))

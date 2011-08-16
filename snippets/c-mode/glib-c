@@ -3,25 +3,20 @@
 # key: glc
 # group: glib
 # --
-
 /* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
 /* ${1:`(glib-initial)`} */
+/* ${2:$1$(glib-class text)} */
 
-#include <glib/gi18n.h>
+#include <glib-object.h>
 
 #include "${1:$(glib-header text)}"
 
-G_DEFINE_TYPE(${2:$1$(glib-class text)}, ${1:$(glib-fprefix text)}, ${3:G_TYPE_OBJECT})
+G_DEFINE_TYPE($2, ${1:$(glib-fprefix text)}, ${3:G_TYPE_OBJECT})
+
+#define ${1:(glib-no-ns text)}_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), ${1:$(glib-type text)},$2Private)
 
 struct _$2Private
 {
-  gpointer dummy;
-};
-
-enum
-{
-  PROP_0,
-  LAST_PROP
 };
 
 static GParamSpec *gParamSpecs[LAST_PROP];
@@ -32,14 +27,11 @@ static GParamSpec *gParamSpecs[LAST_PROP];
  *
  * Finalizer for a #$2 instance.  Frees any resources held by
  * the instance.
- *
- * Returns: None.
- * Side effects: None.
  */
 static void
 ${1:$(glib-fprefix text)}_finalize (GObject *object)
 {
-	G_OBJECT_CLASS(${1:$(glib-fprefix text)}_parent_class)->finalize(object);
+  G_OBJECT_CLASS(${1:$(glib-fprefix text)}_parent_class)->finalize(object);
 }
 
 /**
@@ -47,34 +39,25 @@ ${1:$(glib-fprefix text)}_finalize (GObject *object)
  * @klass: (in): A #$2Class.
  *
  * Initializes the #$2Class and prepares the vtable.
- *
- * Returns: None.
- * Side effects: None.
  */
 static void
 ${1:$(glib-fprefix text)}_class_init ($2Class *klass)
 {
-	GObjectClass *object_class;
+  GObjectClass *object_class = G_OBJECT_CLASS(klass);
 
-	object_class = G_OBJECT_CLASS(klass);
-	object_class->finalize = ${1:$(glib-fprefix text)}_finalize;
-	g_type_class_add_private(object_class, sizeof($2Private));
+  g_type_class_add_private(object_class, sizeof($2Private));
+
+  object_class->finalize = ${1:$(glib-fprefix text)}_finalize;
 }
 
 /**
  * ${1:$(glib-fprefix text)}_init:
- * @$(glib-inst text): (in): A #$2.
+ * @${1$(glib-inst text)}: (in): A #$2.
  *
  * Initializes the newly created #$2 instance.
- *
- * Returns: None.
- * Side effects: None.
  */
 static void
 ${1:$(glib-fprefix text)}_init ($2 *${1:$(glib-inst text)})
 {
-	${1:$(glib-inst text)}->priv =
-		G_TYPE_INSTANCE_GET_PRIVATE(${1:$(glib-inst text)},
-		                            ${1:$(glib-type text)},
-		                            $2Private);
+  ${1:$(glib-inst text)}->priv = ${1:(glib-no-ns text)}_PRIVATE(${1:$(glib-inst text)});
 }

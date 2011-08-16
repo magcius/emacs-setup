@@ -19,10 +19,11 @@ static void
     const GValue *value,
     GParamSpec   *pspec)
 {
-	`(glib-class)` *`(glib-inst)` = `(glib-type)`(object);
-
-	switch (prop_id) {$0
-	default:
-		G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
-	}
+  `(glib-class)` *`(glib-inst)` = `(glib-type)`(object);
+  switch (prop_id)
+    {$0
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
+      break;
+  }
 }
