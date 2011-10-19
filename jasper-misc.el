@@ -19,6 +19,10 @@
 (setq ac-quick-help-delay 0.1)
 (setq ac-delay 0)
 (setq ac-auto-show-menu 0)
+(setq ac-expand-on-auto-complete nil)
+(setq ac-comphist-threshold 0.4)
+
+(define-key ac-completing-map "\t" 'ac-complete)
 
 (autoload 'vala-mode "vala-mode" "Major mode for editing Vala code." t)
 (add-to-list 'auto-mode-alist '("\\.vala$" . vala-mode))
