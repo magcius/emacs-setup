@@ -8,6 +8,8 @@
 ; Show column numbers
 (column-number-mode 1)
 
+(set-face-attribute 'default nil :height 112)
+
 ; Show matching parentheses
 (show-paren-mode 1)
 (set-default 'show-paren-style 'expression)
