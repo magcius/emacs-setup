@@ -2,6 +2,7 @@ vendor/yasnippet
 vendor/auto-complete
 vendor/django-mode
 vendor/magit
+vendor/evil
 auto-save-list
 session*
 tramp
