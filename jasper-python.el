@@ -9,4 +9,7 @@
 (require 'django-mode)
 (require 'jinja)
 
+(add-hook 'django-mode-hook 'ac-ropemacs-setup)
+(add-to-list 'ac-modes 'django-mode)
+
 (provide 'jasper-python)
