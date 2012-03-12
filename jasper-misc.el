@@ -20,7 +20,7 @@
 (setq ac-delay 0)
 (setq ac-auto-show-menu 0)
 (setq ac-expand-on-auto-complete nil)
-(setq ac-comphist-threshold 0.4)
+(setq ac-comphist-threshold 0.7)
 
 (define-key ac-completing-map "\t" 'ac-complete)
 
