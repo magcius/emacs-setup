@@ -18,6 +18,8 @@
 (require 'jasper-visual)
 (require 'jasper-clipboard)
 
+(require 'jasper-auto-complete)
+
 (require 'jasper-snippet)
 (require 'jasper-cc-mode)
 (require 'jasper-python)
