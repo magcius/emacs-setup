@@ -1,6 +1,4 @@
 
-(server-start)
-
 ; Make diff-buffer-with-file not useless
 (setq diff-switches "-u")
 
@@ -19,6 +17,5 @@
 (add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
 
 (require 'mustache-mode)
-(require 'gist)
 
 (provide 'jasper-misc)

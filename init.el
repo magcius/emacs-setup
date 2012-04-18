@@ -26,3 +26,5 @@
 (require 'jasper-misc)
 (require 'jasper-flymake)
 (require 'jasper-keyboard)
+
+(server-start)
