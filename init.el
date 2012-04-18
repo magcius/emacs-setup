@@ -24,7 +24,6 @@
 (require 'jasper-auto-complete)
 
 (require 'jasper-snippet)
-(require 'jasper-cc-mode)
 (require 'jasper-python)
 (require 'jasper-misc)
 (require 'jasper-flymake)
