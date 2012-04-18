@@ -1,4 +1,8 @@
 
+(setq-default tab-width 8)
+(setq-default c-basic-offset 4)
+(setq-default indent-tabs-mode nil)
+
 ; Make diff-buffer-with-file not useless
 (setq diff-switches "-u")
 
