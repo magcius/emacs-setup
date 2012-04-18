@@ -15,6 +15,9 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/django-mode")
 (add-to-list 'load-path "~/.emacs.d/vendor/evil")
 
+(package-initialize)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+
 (require 'jasper-visual)
 (require 'jasper-clipboard)
 
