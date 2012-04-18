@@ -12,6 +12,16 @@
          (skip-chars-forward " \t"))
        (constrain-to-field nil orig-pos)))))
 
+(require 'pager)
+(global-set-key "\C-v"     'pager-page-down)
+(global-set-key [next]     'pager-page-down)
+(global-set-key "\ev"      'pager-page-up)
+(global-set-key [prior]    'pager-page-up)
+(global-set-key '[M-up]    'pager-row-up)
+(global-set-key '[M-kp-8]  'pager-row-up)
+(global-set-key '[M-down]  'pager-row-down)
+(global-set-key '[M-kp-2]  'pager-row-down)
+
 (global-set-key (kbd "C-c C-k")         'delete-whitespace)
 (global-set-key (kbd "C-c #")           'comment-region)
 (global-set-key (kbd "C-c C-#")         'uncomment-region)
@@ -32,8 +42,6 @@
 
 (global-set-key (kbd "C-c C-w")         'adhoc-snippet-create)
 (global-set-key (kbd "C-c C-y")         'adhoc-snippet-insert)
-
-(require 'smooth-scrolling)
 
 ; C-z on Linux freezes the entire window.
 (global-unset-key (kbd "C-z"))
