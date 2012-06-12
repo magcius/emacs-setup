@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: header guard
+# key: hguard
+# group: c
+# --
+
+#ifndef __${1:`(glib-initial)`}_H__
+#define __$1_H__
+
+G_BEGIN_DECLS
+
+G_END_DECLS
+
+#endif /* __$1_H__ */
