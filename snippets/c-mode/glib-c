@@ -19,12 +19,6 @@ struct _$2Private
 {
 };
 
-/**
- * ${1:$(glib-fprefix text)}_class_init:
- * @klass: (in): A #$2Class.
- *
- * Initializes the #$2Class and prepares the vtable.
- */
 static void
 ${1:$(glib-fprefix text)}_class_init ($2Class *klass)
 {
@@ -33,12 +27,6 @@ ${1:$(glib-fprefix text)}_class_init ($2Class *klass)
   g_type_class_add_private (object_class, sizeof($2Private));
 }
 
-/**
- * ${1:$(glib-fprefix text)}_init:
- * @${1:$(glib-inst text)}: (in): A #$2.
- *
- * Initializes the newly created #$2 instance.
- */
 static void
 ${1:$(glib-fprefix text)}_init ($2 *${1:$(glib-inst text)})
 {
