@@ -20,19 +20,6 @@ struct _$2Private
 };
 
 /**
- * ${1:$(glib-fprefix text)}_finalize:
- * @object: (in): A #$2.
- *
- * Finalizer for a #$2 instance.  Frees any resources held by
- * the instance.
- */
-static void
-${1:$(glib-fprefix text)}_finalize (GObject *object)
-{
-  G_OBJECT_CLASS (${1:$(glib-fprefix text)}_parent_class)->finalize (object);
-}
-
-/**
  * ${1:$(glib-fprefix text)}_class_init:
  * @klass: (in): A #$2Class.
  *
@@ -44,8 +31,6 @@ ${1:$(glib-fprefix text)}_class_init ($2Class *klass)
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
   g_type_class_add_private (object_class, sizeof($2Private));
-
-  object_class->finalize = ${1:$(glib-fprefix text)}_finalize;
 }
 
 /**
