@@ -11,4 +11,8 @@
 (put 'js-indent-level 'safe-local-variable 'integerp)
 (put 'py-indent-offset 'safe-local-variable 'integerp)
 
+;; These don't have autoloads.
+(require 'mustache-mode)
+(require 'guess-offset)
+
 (provide 'jasper-misc)
