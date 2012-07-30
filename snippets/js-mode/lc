@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Lang.Class
+# key: lc
+# --
+const $1 = new Lang.Class({
+    Name: '$1',
+    ${2: Extends: $3,}
+
+    _init: function($4) {
+        $0
+    }
+});
