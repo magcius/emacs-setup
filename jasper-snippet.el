@@ -2,10 +2,10 @@
 (require 'yasnippet)
 (require 'glib)
 
-(yas/initialize)
-(yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets/")
-(yas/load-directory "~/.emacs.d/vendor/django-mode/snippets/")
-(yas/load-directory "~/.emacs.d/snippets/")
+(yas-global-mode 1)
+(yas-load-directory "~/.emacs.d/vendor/yasnippet/snippets/")
+(yas-load-directory "~/.emacs.d/vendor/django-mode/snippets/")
+(yas-load-directory "~/.emacs.d/snippets/")
 
 (defvar adhoc-snippet-last nil)
 
