@@ -17,13 +17,13 @@
                 "$0")))
     (setq adhoc-snippet-last text)
     ;; a lot of crazy things break if we don't turn this on
-    (yas/minor-mode-on)
-    (yas/expand-snippet text begin end)))
+    (yas-minor-mode 1)
+    (yas-expand-snippet text begin end)))
 
 (defun adhoc-snippet-insert ()
   (interactive)
   ;; a lot of crazy things break if we don't turn this on
-  (yas/minor-mode-on)
-  (yas/expand-snippet adhoc-snippet-last))
+  (yas-minor-mode 1)
+  (yas-expand-snippet adhoc-snippet-last))
 
 (provide 'jasper-snippet)
