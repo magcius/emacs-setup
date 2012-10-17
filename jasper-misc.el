@@ -13,6 +13,13 @@
 
 (setq user-mail-address "jstpierre@mecheye.net")
 
+(defun poauth ()
+  (interactive)
+  (let* ((command "git log --format=\"%an\" $(git describe --abbrev=0)..HEAD -- po | sort | uniq")
+         (lines (process-lines "bash" "-c" command)))
+    (dolist (line lines)
+      (insert (concat "* " line "\n")))))
+
 ;; These don't have autoloads.
 (require 'mustache-mode)
 (require 'guess-offset)
