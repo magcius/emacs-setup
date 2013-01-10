@@ -22,7 +22,9 @@
 
 ;; These don't have autoloads.
 (require 'mustache-mode)
-(require 'guess-offset)
+
+(require 'dtrt-indent)
+(dtrt-indent-mode 1)
 
 (provide 'jasper-misc)
 
