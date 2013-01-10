@@ -29,7 +29,9 @@
 (add-to-list 'flymake-allowed-file-name-masks
 			 '("\\.py\\'" flymake-pylint-init))
 
+(setq flymake-gui-warnings-enabled nil)
+
 ;; Set as a minor mode for python
-;; (add-hook 'python-mode-hook 'flymake-mode)
+(add-hook 'python-mode-hook 'flymake-mode)
 
 (provide 'jasper-flymake)
