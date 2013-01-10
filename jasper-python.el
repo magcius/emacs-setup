@@ -6,6 +6,7 @@
 (setq ropemacs-separate-doc-buffer t)
 (setq ropemacs-enable-autoimport   nil)
 
+(require 'cython-mode)
 (require 'django-mode)
 (require 'jinja)
 
