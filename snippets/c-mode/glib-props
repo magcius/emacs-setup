@@ -6,15 +6,15 @@
 
 static void
 `(glib-fprefix)`_get_property (GObject      *object,
-    guint       prop_id,
-    GValue     *value,
-    GParamSpec *pspec)
+    guint         prop_id,
+    GValue       *value,
+    GParamSpec   *pspec)
 {
-  `(glib-class)` *`(glib-inst)` = `(glib-type)`(object);
+  `(glib-class)` *`(glib-inst)` = `(glib-type)` (object);
   switch (prop_id)
     {$0
     default:
-      G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
       break;
   }
 }
@@ -25,11 +25,11 @@ static void
     const GValue *value,
     GParamSpec   *pspec)
 {
-  `(glib-class)` *`(glib-inst)` = `(glib-type)`(object);
+  `(glib-class)` *`(glib-inst)` = `(glib-type)` (object);
   switch (prop_id)
     {$0
     default:
-      G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
       break;
   }
 }
