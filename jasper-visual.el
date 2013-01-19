@@ -26,6 +26,8 @@
 (set-default 'indicate-empty-lines 'empty-line)
 
 ; Make C-x b bareable
+(setq ido-everywhere 1)
+(setq ido-enable-flex-matching 1)
 (ido-mode t)
 
 (require 'color-theme)
