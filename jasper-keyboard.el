@@ -33,6 +33,8 @@
 (global-set-key (kbd "C-c C-w")         'adhoc-snippet-create)
 (global-set-key (kbd "C-c C-y")         'adhoc-snippet-insert)
 
+(global-set-key (kbd "C-x C-g")         'idomenu)
+
 ; C-z on Linux freezes the entire window.
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
