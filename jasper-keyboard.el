@@ -35,6 +35,8 @@
 
 (global-set-key (kbd "C-x C-g")         'idomenu)
 
+(global-set-key (kbd "C-o")             'er/expand-region)
+
 ; C-z on Linux freezes the entire window.
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
