@@ -3,6 +3,8 @@
 (setq-default c-basic-offset 4)
 (setq-default indent-tabs-mode nil)
 
+(pending-delete-mode t)
+
 ; Make diff-buffer-with-file not useless
 (setq diff-switches "-u")
 
