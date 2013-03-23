@@ -1,5 +1,6 @@
 
 (require 'magit)
+
 (defun delete-whitespace (&optional backwards)
   "Ripped directly from delete-horizontal-space"
   (interactive "*P")
@@ -36,6 +37,9 @@
 (global-set-key (kbd "C-x C-g")         'idomenu)
 
 (global-set-key (kbd "C-o")             'er/expand-region)
+
+(global-set-key (kbd "C-.")             'mc/mark-next-like-this)
+(global-set-key (kbd "C-,")             'mc/mark-previous-like-this)
 
 ; C-z on Linux freezes the entire window.
 (global-unset-key (kbd "C-z"))
