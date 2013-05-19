@@ -1,7 +1,6 @@
 elpa/
 vendor/yasnippet
 vendor/auto-complete
-vendor/django-mode
 vendor/magit
 vendor/popup-el
 auto-save-list
