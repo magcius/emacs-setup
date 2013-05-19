@@ -1,8 +1,4 @@
 elpa/
-vendor/yasnippet
-vendor/auto-complete
-vendor/magit
-vendor/popup-el
 auto-save-list
 session*
 tramp
