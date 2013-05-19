@@ -3,7 +3,6 @@ vendor/yasnippet
 vendor/auto-complete
 vendor/django-mode
 vendor/magit
-vendor/evil
 vendor/popup-el
 auto-save-list
 session*
