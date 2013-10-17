@@ -23,13 +23,10 @@ G_BEGIN_DECLS
 
 typedef struct _$2        $2;
 typedef struct _$2Class   $2Class;
-typedef struct _$2Private $2Private;
 
 struct _$2
 {
   ${3:GObject} parent;
-
-  $2Private *priv;
 };
 
 struct _$2Class

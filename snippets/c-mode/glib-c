@@ -11,24 +11,19 @@
 
 #include "${1:$(glib-header text)}"
 
-G_DEFINE_TYPE ($2, ${1:$(glib-fprefix text)}, ${3:G_TYPE_OBJECT});
-
-#define GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), ${1:$(glib-t text)}, $2Private))
-
 struct _$2Private
 {
 };
+typedef struct _$2Private $2Private;
+
+G_DEFINE_TYPE_WITH_PRIVATE ($2, ${1:$(glib-fprefix text)}, ${3:G_TYPE_OBJECT});
 
 static void
 ${1:$(glib-fprefix text)}_class_init ($2Class *klass)
 {
-  GObjectClass *object_class = G_OBJECT_CLASS (klass);
-
-  g_type_class_add_private (object_class, sizeof($2Private));
 }
 
 static void
 ${1:$(glib-fprefix text)}_init ($2 *${1:$(glib-inst text)})
 {
-  ${1:$(glib-inst text)}->priv = GET_PRIVATE (${1:$(glib-inst text)});
 }
