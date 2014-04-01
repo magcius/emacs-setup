@@ -5,25 +5,25 @@
 # --
 /* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
 /* ${1:`(glib-initial)`} */
-/* ${2:$1$(glib-class text)} */
+/* ${2:$1$(glib-class yas-text)} */
 
 #include <glib-object.h>
 
-#include "${1:$(glib-header text)}"
+#include "${1:$(glib-header yas-text)}"
 
 struct _$2Private
 {
 };
 typedef struct _$2Private $2Private;
 
-G_DEFINE_TYPE_WITH_PRIVATE ($2, ${1:$(glib-fprefix text)}, ${3:G_TYPE_OBJECT});
+G_DEFINE_TYPE_WITH_PRIVATE ($2, ${1:$(glib-fprefix yas-text)}, ${3:G_TYPE_OBJECT});
 
 static void
-${1:$(glib-fprefix text)}_class_init ($2Class *klass)
+${1:$(glib-fprefix yas-text)}_class_init ($2Class *klass)
 {
 }
 
 static void
-${1:$(glib-fprefix text)}_init ($2 *${1:$(glib-inst text)})
+${1:$(glib-fprefix yas-text)}_init ($2 *${1:$(glib-inst yas-text)})
 {
 }
