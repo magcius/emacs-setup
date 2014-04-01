@@ -8,7 +8,6 @@
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (add-to-list 'load-path "~/.emacs.d/vendor/magit")
-(add-to-list 'load-path "~/.emacs.d/vendor/magit/cl-lib")
 (add-to-list 'load-path "~/.emacs.d/vendor/Pymacs")
 (add-to-list 'load-path "~/.emacs.d/vendor/popup-el")
 (add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
