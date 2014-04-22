@@ -3,11 +3,8 @@
 # key: glc
 # group: glib
 # --
-/* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
 /* ${1:`(glib-initial)`} */
 /* ${2:$1$(glib-class yas-text)} */
-
-#include <glib-object.h>
 
 #include "${1:$(glib-header yas-text)}"
 

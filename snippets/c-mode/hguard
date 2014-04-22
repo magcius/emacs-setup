@@ -4,11 +4,7 @@
 # group: c
 # --
 
-#ifndef __${1:`(glib-initial)`}_H__
-#define __$1_H__
+#ifndef ${1:`(glib-initial)`}_H
+#define $1_H
 
-G_BEGIN_DECLS
-
-G_END_DECLS
-
-#endif /* __$1_H__ */
+#endif /* $1_H */
