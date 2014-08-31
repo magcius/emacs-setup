@@ -3,7 +3,7 @@
 # key: gpl
 # --
 /*
- * Copyright (C) ${2:`(format-time-string "%Y")`} ${1:Red Hat}
+ * Copyright (C) ${2:`(format-time-string "%Y")`} ${1:Endless Mobile}
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
