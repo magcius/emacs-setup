@@ -12,6 +12,8 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/vendor/yasnippet")
 
+(require 'package)
+
 (package-initialize)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
