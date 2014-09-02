@@ -16,6 +16,12 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
+(defvar packages '(color-theme dtrt-indent expand-region gh gist git-commit-mode git-rebase-mode idomenu logito multiple-cursors mustache-mode pcache vala-mode))
+
+(dolist (pkg packages)
+  (if (not (package-installed-p pkg))
+      (package-install pkg)))
+
 (require 'jasper-visual)
 (require 'jasper-clipboard)
 
