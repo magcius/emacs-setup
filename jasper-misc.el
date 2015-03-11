@@ -13,6 +13,10 @@
 (put 'js-indent-level 'safe-local-variable 'integerp)
 (put 'py-indent-offset 'safe-local-variable 'integerp)
 
+;; mesa likes to do this
+(add-to-list 'safe-local-eval-forms '(c-set-offset innamespace 0))
+(add-to-list 'safe-local-eval-forms '(c-set-offset inline-open 0))
+
 (setq user-mail-address "jstpierre@mecheye.net")
 
 (defun poauth ()
