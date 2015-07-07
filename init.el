@@ -5,13 +5,15 @@
 ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 
 (require 'package)
 
 (package-initialize)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+			 ("marmalade" . "https://marmalade-repo.org/packages/")
+			 ("melpa" . "http://melpa.org/packages/")))
 
 (defvar packages
   '(
@@ -27,17 +29,10 @@
     yasnippet
 ))
 
-(dolist (pkg packages)
-  (catch 'refresh
+(defun install-missing ()
+  (dolist (pkg packages)
     (if (not (package-installed-p pkg))
-        (throw 'refresh)
-      ))
-  (package-refresh-contents))
-
-(dolist (pkg packages)
-  (if (not (package-installed-p pkg))
-      (package-refresh-contents)
-      (package-install pkg)))
+	(package-install pkg))))
 
 (require 'jasper-visual)
 (require 'jasper-clipboard)
@@ -45,7 +40,6 @@
 (require 'jasper-auto-complete)
 
 (require 'jasper-snippet)
-(require 'jasper-python)
 (require 'jasper-misc)
 (require 'jasper-flymake)
 (require 'jasper-keyboard)
