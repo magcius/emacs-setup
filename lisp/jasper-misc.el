@@ -26,9 +26,6 @@
     (dolist (line lines)
       (insert (concat "* " line "\n")))))
 
-;; These don't have autoloads.
-(require 'mustache-mode)
-
 (require 'dtrt-indent)
 (dtrt-indent-mode 1)
 
