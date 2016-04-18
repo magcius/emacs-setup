@@ -30,9 +30,8 @@
 (setq ido-enable-flex-matching 1)
 (ido-mode t)
 
-(require 'color-theme)
-(require 'jasper-color)
-(setq color-theme-is-global t)
-(color-theme-jasper)
+(setq custom-safe-themes '("7542572dc39040714407ab3217d10fa3e692140d5bbbbc16f08c04566ce7ee65" default))
+
+(load-theme 'atom-one-dark)
 
 (provide 'jasper-visual)

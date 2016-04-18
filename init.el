@@ -19,7 +19,6 @@
 (defvar packages
   '(
     auto-complete
-    color-theme
     dtrt-indent
     expand-region
     glsl-mode
