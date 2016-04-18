@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: glib derivable
+# key: gld
+# group: glib
+# --
+
+/* ${1:`(glib-initial)`} */
+G_DECLARE_DERIVABLE_TYPE (${1:$(glib-class yas-text)}, ${1:$(downcase yas-text)}, ${1:$(glib-ns yas-text)}, ${1:$(glib-no-ns yas-text)}, ${2:GObject})
